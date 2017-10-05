@@ -4,23 +4,19 @@ def main(args: Array[String]) {
       val list=List(1,2,2,3,4,5,5,7,19,10)
       val list1 = List(10,11,12,13,15,15)
       println(" " + lastNth (3,list)) 
-      println( "True : " + isPrime(15) ) 
-      
-      
+      println( "True : " + isPrime(15) )
       var x: Int =0
       var y: Int =0
-
      println( "" + isCoprimeTo(x=3,y =4)) 
-     println("Result of XOR OPERATION for true and true   -->"+xorop(true,true))
-      
-     println( "Result of AND OPERATION for true and true   --- " + ANDop(true,true))
-     println( "Result of NAND OPERATION for false and false   --- " + NANDop(false,false)) 
-     println( "Result of last    --- " + cal(list1)) 
+     println("Result of XOR OPERATION: "+xorop(true,true))
+     println( "Result of AND OPERATION: " + ANDop(true,true))
+     println( "Result of NAND OPERATION: " + NANDop(false,false)) 
+     println( "Result of last: " + cal(list1)) 
 }
 
 def lastNth(x:Int ,y:List[Int]):Int={
-  val z=10-x;    // get index number
-  return y.init(z)       //return element
+  val z=10-x;
+  return y.init(z)
   
 }
 def isCoprimeTo(x:Int,y: Int): Boolean = gcd(x, y) == 1
@@ -79,16 +75,7 @@ def NANDop(x:Boolean,y:Boolean):Boolean={
   else
     return true;    
     }
-
-
-
-
-
 def cal(y:List[Int]):Int={
-//val z=mul(x+1,x+3,y)         //call for multipulication  
-//val a=add(x,z,y)
-//val b=sub(x+4,a,y)
-//val c= div(x+2,b,y)
 val s= y.init(0)*y.init(1)
 val as= y.init(2)+ s
 val asd =  as - y.init(3)
